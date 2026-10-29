@@ -1,0 +1,24 @@
+{
+  "name": "icasho-loop",
+  "productName": "Icasho Loop",
+  "version": "1.0.0",
+  "description": "Reproductor flotante en bucle aleatorio que se queda encima de todas las apps",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:nosandbox": "electron . --no-sandbox",
+    "dist:win": "electron-builder --win",
+    "dist:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.local.icasholoop",
+    "productName": "Icasho Loop",
+    "files": ["main.js", "preload.js", "renderer/**/*", "package.json"],
+    "win": { "target": ["portable", "nsis"] },
+    "linux": { "target": ["AppImage"], "category": "AudioVideo" }
+  }
+}

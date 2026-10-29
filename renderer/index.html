@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; frame-src https://*.tiktok.com; img-src 'self' data:; style-src 'self'; script-src 'self'">
+  <title>Icasho Loop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar top">
+    <span class="title">Icasho Loop</span>
+    <div class="btns">
+      <button id="pin" class="on" title="Siempre encima">Fijar</button>
+      <button id="cfg" title="Ajustes">Ajustes</button>
+      <button id="min" title="Minimizar">–</button>
+      <button id="close" title="Cerrar">✕</button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div class="frame">
+      <iframe id="player" allow="autoplay; encrypted-media" referrerpolicy="origin"></iframe>
+
+      <div id="notice" class="notice" hidden>
+        <p id="noticeText"></p>
+        <button id="noticeBtn">Reintentar</button>
+      </div>
+    </div>
+
+    <section id="panel" class="panel" hidden>
+      <label>Usuario de TikTok
+        <input id="user" type="text" spellcheck="false" autocomplete="off">
+      </label>
+
+      <div class="row">
+        <button id="scan" class="primary">Escanear videos</button>
+        <button id="scanCancel" hidden>Parar</button>
+      </div>
+      <p id="scanStatus" class="hint"></p>
+
+      <label>Añadir enlaces a mano
+        <textarea id="manual" rows="3" placeholder="Pega enlaces de videos, uno por línea"></textarea>
+      </label>
+      <button id="addManual">Añadir a la lista</button>
+
+      <label>Transparencia
+        <input id="opacity" type="range" min="25" max="100" value="100">
+      </label>
+
+      <p id="envInfo" class="hint"></p>
+    </section>
+  </main>
+
+  <footer class="bar bottom">
+    <button id="prev" title="Anterior">⏮</button>
+    <button id="next" class="primary" title="Siguiente">⏭</button>
+    <button id="mute" title="Silenciar">Sonido</button>
+    <span id="counter" class="counter"></span>
+  </footer>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
