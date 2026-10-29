@@ -20,13 +20,13 @@ Funciona en Windows y Linux (Wayland y X11). Hecha con Electron.
 Necesitas [Node.js](https://nodejs.org) 18 o superior (recomendado la LTS) y conexión a internet.
 
 ```
-git clone https://github.com/TU_USUARIO/icasho-loop.git
+git clone https://github.com/noahazrz/icasho-loop.git
 cd icasho-loop
 npm install
 npm start
 ```
 
-Cambia `TU_USUARIO` por tu usuario de GitHub. Sin git, descarga el zip desde el botón verde
+Cambia `noahazrz` por tu usuario de GitHub. Sin git, descarga el zip desde el botón verde
 **Code > Download ZIP**, descomprímelo y ejecuta `npm install` y `npm start` dentro de la carpeta.
 
 ### Windows
